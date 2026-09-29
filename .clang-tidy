@@ -1,0 +1,44 @@
+# Shared C++ conventions.
+# Use the selected compiler toolchain’s matching LLVM tools.
+# Rationale and provenance: docs/tooling.md and docs/sources.md.
+---
+Checks: >
+  -*,
+  readability-identifier-naming
+CheckOptions:
+  - key: readability-identifier-naming.PrivateMemberPrefix
+    value: '_'
+  - key: readability-identifier-naming.ProtectedMemberPrefix
+    value: '_'
+  - key: readability-identifier-naming.ClassCase
+    value: lower_case
+  - key: readability-identifier-naming.StructCase
+    value: lower_case
+  - key: readability-identifier-naming.FunctionCase
+    value: lower_case
+  - key: readability-identifier-naming.MethodCase
+    value: lower_case
+  - key: readability-identifier-naming.NamespaceCase
+    value: lower_case
+  - key: readability-identifier-naming.EnumCase
+    value: lower_case
+  - key: readability-identifier-naming.EnumConstantCase
+    value: lower_case
+  - key: readability-identifier-naming.VariableCase
+    value: lower_case
+  - key: readability-identifier-naming.ParameterCase
+    value: lower_case
+  - key: readability-identifier-naming.TemplateParameterCase
+    value: CamelCase
+  - key: readability-identifier-naming.TypeTemplateParameterCase
+    value: CamelCase
+
+  - key: readability-identifier-naming.ParameterIgnoredRegexp
+    value: '^(L|[A-Za-z][A-Za-z0-9]*(_[A-Za-z0-9]+)*_)$'
+  - key: readability-identifier-naming.VariableIgnoredRegexp
+    value: '^(L|[A-Za-z][A-Za-z0-9]*(_[A-Za-z0-9]+)*_)$'
+  - key: readability-identifier-naming.NamespaceIgnoredRegexp
+    value: '^[A-Za-z][A-Za-z0-9]*(_[A-Za-z0-9]+)*_$'
+  - key: readability-identifier-naming.EnumConstantIgnoredRegexp
+    value: '^[A-Za-z][A-Za-z0-9]*(_[A-Za-z0-9]+)*_$'
+...
